@@ -4,7 +4,7 @@ services:
 
   strfry-relay:
     container_name: strfry-relay
-    image: dockurr/strfry:latest
+    image: getumbrel/nostr-rs-relay:0.8.1@sha256:a6c857aecd4964bf058ec5c3c0fea95e0d87ed0cc789f2140f96de108e5515ec
     environment:
       VIRTUAL_HOST: relay.nostrapp.online
       VIRTUAL_PORT: 7777
