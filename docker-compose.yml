@@ -19,6 +19,7 @@ services:
       - ./strfry/strfry.conf:/etc/strfry.conf
     networks:
       - proxy
+      - nostr
 
   web:
     image: getumbrel/umbrel-nostr-relay
@@ -32,8 +33,12 @@ services:
       - 3000:3000 # to access the web view use relay.nostrapp.online:3000
     networks:
       - proxy
+      - nostr
 
 networks:
+  nostr:
+    external: false
+    name: nostr
   proxy:
     external: true
     name: proxy
