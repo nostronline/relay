@@ -4,7 +4,7 @@ services:
 
   strfry-relay:
     container_name: strfry-relay
-    image: dockurr/strfry:latest
+    image: ghcr.io/hoytech/strfry:latest
     environment:
       VIRTUAL_HOST: relay.nostrapp.online
       VIRTUAL_PORT: 7777
@@ -17,7 +17,7 @@ services:
     volumes:
       - ./my-strfry.conf:/etc/strfry.conf
       - ./my-strfry-db:/app/strfry-db
-      - ./write-policy.py:/app/write-policy.py
+    #- ./write-policy.py:/app/write-policy.py
     networks:
       - proxy
       - nostr
