@@ -15,10 +15,11 @@ services:
     #ports:
     #  - 7777:7777
     volumes:
-      - ./strfry/:/app/strfry-db
+      - ./strfry-db:/app/strfry-db
       - ./strfry/strfry.conf:/etc/strfry.conf
     networks:
       - proxy
+      - nostr
 
 
   web:
@@ -33,6 +34,7 @@ services:
       - 3000:3000 # to access the web view use relay.nostrapp.online:3000
     networks:
       - proxy
+      - nostr
 
 
 networks:
