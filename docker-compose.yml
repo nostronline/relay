@@ -4,7 +4,7 @@ services:
 
   strfry-relay:
     container_name: strfry-relay
-    image: getumbrel/nostr-rs-relay:0.8.1@sha256:a6c857aecd4964bf058ec5c3c0fea95e0d87ed0cc789f2140f96de108e5515ec
+    image: dockurr/strfry:latest
     environment:
       VIRTUAL_HOST: relay.nostrapp.online
       VIRTUAL_PORT: 7777
@@ -19,7 +19,7 @@ services:
       - ./strfry/strfry.conf:/etc/strfry.conf
     networks:
       - proxy
-      - nostr
+
 
   web:
     image: getumbrel/umbrel-nostr-relay
@@ -33,7 +33,7 @@ services:
       - 3000:3000 # to access the web view use relay.nostrapp.online:3000
     networks:
       - proxy
-      - nostr
+
 
 networks:
   nostr:
