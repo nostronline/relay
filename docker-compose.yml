@@ -6,12 +6,12 @@ services:
     container_name: strfry-relay
     image: ghcr.io/hoytech/strfry:latest
     environment:
-      VIRTUAL_HOST: relay.nostrapp.online
+      VIRTUAL_HOST: relay.nostronline.online
       VIRTUAL_PORT: 7777
       VIRTUAL_PROTO: http
       VIRTUAL_NETWORK: proxy
-      LETSENCRYPT_HOST: relay.nostrapp.online
-      LETSENCRYPT_EMAIL: admin@nostrapp.online
+      LETSENCRYPT_HOST: relay.nostronline.online
+      LETSENCRYPT_EMAIL: admin@nostronline.online
     ports:
       - 7777:7777
     volumes:
