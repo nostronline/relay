@@ -32,7 +32,7 @@ services:
       RELAY_HOST: "strfry-relay"
       RELAY_PORT: "7777"
     ports:
-      - 3000:3000 # to access the web view use relay.nostrapp.online:3000
+      - 3000:3000 # to access the web view use relay.nostronline.online:3000
     networks:
       - proxy
       - nostr

@@ -1,5 +1,5 @@
 # CONFIGURE YOUR RELAY DOMAIN NAME BELOW:
-relay.nostrapp.online {
+relay.nostronline.online {
   reverse_proxy / strfry:7777 {
     header_up x-real-ip {remote_host}
   }
